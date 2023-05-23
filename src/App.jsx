@@ -9,8 +9,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<MainLayout />}>
-            <Route path="/" element={<Home />} />
             <Route path="/Starred" element={<Starred />} />
+            <Route path="/" element={<Home />} />
             <Route path="/contact" element={<dev>heloo contact☎️</dev>} />
             <Route path="*" element={<dev>not found 404</dev>} />
           </Route>

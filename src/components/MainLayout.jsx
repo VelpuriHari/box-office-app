@@ -6,8 +6,8 @@ const MainLayout = () => {
   return (
     <dev>
       <Nav />
-      <Outlet />
       <AppTitle title="Bahubali" subtitle="Prabhas" />
+      <Outlet />
     </dev>
   );
 };
