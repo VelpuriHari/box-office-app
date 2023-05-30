@@ -1,7 +1,7 @@
-import Home from "./pages/Home";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Starred from "./pages/Starred";
-import MainLayout from "./components/MainLayout";
+import Home from './pages/Home';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Starred from './pages/Starred';
+import MainLayout from './components/MainLayout';
 
 function App() {
   return (
