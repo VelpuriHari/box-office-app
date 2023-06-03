@@ -1,12 +1,4 @@
-const ActorsCard = ({
-  name,
-  image,
-  gender,
-  country,
-  birthday,
-  deathday,
-  summary,
-}) => {
+const ActorsCard = ({ name, image, gender, country, birthday, deathday }) => {
   return (
     <dev>
       <dev>
