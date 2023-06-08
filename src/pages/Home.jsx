@@ -6,7 +6,6 @@ import { useQuery } from '@tanstack/react-query';
 import ShowsGrid from '../components/shows/ShowsGrid';
 const Home = () => {
   const [filter, setFilter] = useState(null);
-
   const { data: apiData, error: apiDataError } = useQuery({
     queryKey: ['search', filter],
     queryFn: () =>
@@ -51,7 +50,7 @@ const Home = () => {
       return <div>Error occured :{apiDataError.message}</div>;
     }
     if (apiData?.length === 0) {
-      return <dev>Not found </dev>;
+      return <div>Not found </div>;
     }
 
     if (apiData) {

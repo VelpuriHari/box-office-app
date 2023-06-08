@@ -13,7 +13,7 @@ const LINKS = [
 
 const Nav = () => {
   return (
-    <dev>
+    <div>
       <ul>
         {LINKS.map(item => (
           <li key={item.to}>
@@ -21,7 +21,7 @@ const Nav = () => {
           </li>
         ))}
       </ul>
-    </dev>
+    </div>
   );
 };
 export default Nav;

@@ -1,21 +1,25 @@
-import { Link } from 'react-router-dom';
-
-const ShowsCard = ({ name, image, id, summary }) => {
+const ShowsCard = ({ name, image, id, summary, onStarMeClick, isStarred }) => {
   const summaryStripped = summary
     ? summary.split('').slice(0, 100).join('').replace(/<.+?>/g, '')
     : 'No description';
   return (
     <dev>
       <dev>
-        <img src={image}></img>
+        <img src={image} alt={name} />
       </dev>
-      <dev>
-        <h1>{name}</h1>
-      </dev>
-      <dev>{summaryStripped}</dev>
-      <Link to={`/show/${id}`}>Read more</Link>
 
-      <button type="button">Star me🌟</button>
+      <h1>{name}</h1>
+
+      <p>{summaryStripped}</p>
+      <div>
+        <a href={`/show/${id}`} target="_blank" rel="noreferrer">
+          Read more
+        </a>
+
+        <button type="button" onClick={() => onStarMeClick(id)}>
+          {isStarred ? 'Unstar me' : ' Star me⭐'}
+        </button>
+      </div>
     </dev>
   );
 };

@@ -18,7 +18,7 @@ function App() {
               <Route path="/contact" element={<div>heloo contact☎️</div>} />
             </Route>
             <Route path="/Show/:ShowId" element={<Show />} />
-            <Route path="*" element={<dev>not found 404</dev>} />
+            <Route path="*" element={<div>not found 404</div>} />
             {/*<Route path="/" element={<App />}>
         <Route index element={<Home />} />
         <Route path="teams" element={<Teams />}>

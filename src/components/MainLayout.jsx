@@ -4,11 +4,11 @@ import AppTitle from './AppTitle';
 
 const MainLayout = () => {
   return (
-    <dev>
+    <div>
       <Nav />
       <AppTitle title="Bahubali" subtitle="Prabhas" />
       <Outlet />
-    </dev>
+    </div>
   );
 };
 export default MainLayout;
