@@ -55,7 +55,7 @@ const Home = () => {
 
     if (apiData) {
       return apiData[0].show ? (
-        <ShowsGrid apiData={apiData} />
+        <ShowsGrid shows={apiData} />
       ) : (
         <ActorsGrid apiData={apiData} />
       );

@@ -1,9 +1,9 @@
 const ActorsCard = ({ name, image, gender, country, birthday, deathday }) => {
   return (
-    <dev>
-      <dev>
+    <div>
+      <div>
         <img src={image}></img>
-      </dev>
+      </div>
       <h1>
         {name}
         {!!gender && `(${gender})`}
@@ -12,7 +12,7 @@ const ActorsCard = ({ name, image, gender, country, birthday, deathday }) => {
 
       {!!birthday && <p>Born {birthday}</p>}
       <p>{deathday ? `Died ${deathday}` : 'Alive'}</p>
-    </dev>
+    </div>
   );
 };
 export default ActorsCard;

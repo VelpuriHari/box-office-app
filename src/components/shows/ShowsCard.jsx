@@ -3,10 +3,10 @@ const ShowsCard = ({ name, image, id, summary, onStarMeClick, isStarred }) => {
     ? summary.split('').slice(0, 100).join('').replace(/<.+?>/g, '')
     : 'No description';
   return (
-    <dev>
-      <dev>
+    <div>
+      <div>
         <img src={image} alt={name} />
-      </dev>
+      </div>
 
       <h1>{name}</h1>
 
@@ -20,7 +20,7 @@ const ShowsCard = ({ name, image, id, summary, onStarMeClick, isStarred }) => {
           {isStarred ? 'Unstar me' : ' Star me⭐'}
         </button>
       </div>
-    </dev>
+    </div>
   );
 };
 export default ShowsCard;

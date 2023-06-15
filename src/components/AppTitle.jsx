@@ -4,9 +4,9 @@ export default function AppTitle(props) {
     subtitle = 'Are you looking for movie🍿 or an actor👩🏾‍🎤?',
   } = props;
   return (
-    <dev>
+    <div>
       <h2>{title}</h2>
       <p>{subtitle}</p>
-    </dev>
+    </div>
   );
 }

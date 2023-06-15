@@ -26,7 +26,7 @@ const starredShowsReducer = (currentStarred, action) => {
 };
 */
 
-const ShowsGrid = ({ apiData }) => {
+const ShowsGrid = ({ shows }) => {
   const [starredShows, dispatchStarred] = useStarredShows();
   const onStarMeClick = showId => {
     const isStarred = starredShows.includes(showId);
@@ -39,7 +39,7 @@ const ShowsGrid = ({ apiData }) => {
       dispatchStarred({ type: 'START', showId });
     }
   };
-  return apiData.map(data => (
+  return shows.map(data => (
     <ShowsCard
       name={data.show.name}
       image={data.show.image ? data.show.image.medium : './notfoundimg.png'}
