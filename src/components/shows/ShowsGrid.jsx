@@ -1,5 +1,6 @@
 import ShowsCard from './ShowsCard';
 import { useStarredShows } from '../../lib/useStarredShows';
+import { FlexGrid } from '../common/FlexGrid';
 
 /*
 const usePersistedReducer = (reducer, initialState, localStorageKey) => {
@@ -34,21 +35,25 @@ const ShowsGrid = ({ shows }) => {
     console.log({ isStarred });
     console.log(showId);
     if (isStarred) {
-      dispatchStarred({ type: 'UNSTART', showId });
+      dispatchStarred({ type: 'UNSTAR', showId });
     } else {
-      dispatchStarred({ type: 'START', showId });
+      dispatchStarred({ type: 'STAR', showId });
     }
   };
-  return shows.map(data => (
-    <ShowsCard
-      name={data.show.name}
-      image={data.show.image ? data.show.image.medium : './notfoundimg.png'}
-      id={data.show.id}
-      summary={data.show.summary}
-      key={data.show.id}
-      onStarMeClick={onStarMeClick}
-      isStarred={starredShows.includes(data.show.id)}
-    />
-  ));
+  return (
+    <FlexGrid>
+      {shows.map(data => (
+        <ShowsCard
+          name={data.show.name}
+          image={data.show.image ? data.show.image.medium : './notfoundimg.png'}
+          id={data.show.id}
+          summary={data.show.summary}
+          key={data.show.id}
+          onStarMeClick={onStarMeClick}
+          isStarred={starredShows.includes(data.show.id)}
+        />
+      ))}
+    </FlexGrid>
+  );
 };
 export default ShowsGrid;
