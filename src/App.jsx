@@ -1,5 +1,5 @@
 import Home from './pages/Home';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Starred from './pages/Starred';
 import MainLayout from './components/MainLayout';
 import Show from './pages/Show';
@@ -12,7 +12,7 @@ function App() {
     <div>
       <QueryClientProvider client={queryClient}>
         <GlobalTheme>
-          <BrowserRouter>
+          <HashRouter>
             <Routes>
               <Route element={<MainLayout />}>
                 <Route path="/Starred" element={<Starred />} />
@@ -35,7 +35,7 @@ function App() {
       </Route>
       <Route path="contact-us" element={<Contact />} />*/}
             </Routes>
-          </BrowserRouter>
+          </HashRouter>
         </GlobalTheme>
       </QueryClientProvider>
     </div>
